@@ -1,0 +1,75 @@
+@use "../abstracts/variables";
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+    color: variables.$text-color;
+}
+
+p {
+    margin: 0;
+}
+
+/**
+ * Styles for text
+ */
+
+.viewer-text {
+    font-family: variables.$text-font-stack;
+    font-weight: map-get(variables.$font-weight, 'regular');
+    &.header-1 {
+        font-size: map-get(variables.$text-size, 'large');
+    }
+
+    &.header-2 {
+        font-size: map-get(variables.$text-size, 'medium');
+    }
+
+    &.header-3 {
+        font-size: map-get(variables.$text-size, 'small');
+    }
+
+    &.body-1 {
+        font-size: map-get(variables.$text-size, 'medium');
+        font-weight: map-get(variables.$font-weight, 'light');
+    }
+
+    &.body-2 {
+        font-size: map-get(variables.$text-size, 'small');
+        font-weight: map-get(variables.$font-weight, 'light');
+    }
+
+    &.body-3 {
+        font-size: map-get(variables.$text-size, 'small');
+    }
+
+    &.body-4 {
+        font-size: map-get(variables.$text-size, 'body-small');
+        font-weight: map-get(variables.$font-weight, 'light');
+    }
+    &.body-5 {
+        font-size: map-get(variables.$text-size, 'body-small');
+        font-weight: map-get(variables.$font-weight, 'bold');
+    }
+
+    &.button-text {
+        color: variables.$color-white;
+        font-size: map-get(variables.$text-size, 'body-small');
+    }
+    &.button-text-black {
+        color: variables.$color-black;
+        font-size: map-get(variables.$text-size, 'body-small');
+    }
+}
+
+/**
+ * Text truncate
+ */
+.text-truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

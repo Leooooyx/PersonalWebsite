@@ -1,17 +1,23 @@
 {
-  "name": "ejs-challenge",
+  "name": "yuxuan-portflio",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js & npm run scss",
+    "scss": "sass --watch stylesheets/main.scss public/css/styles.css"
   },
-  "author": "",
+  "author": "Yuxuan Liu",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "sass": "^1.53.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }
